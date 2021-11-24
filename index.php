@@ -118,10 +118,10 @@
             <span class="m-0">Chironjib Mujib Official Trailer</span>
         </div>
         <div class="row">
-            <div class="col-md-3"><img src="assets/img/qutation/01.gif" alt="Chironjib Mujib Dialogues"></div>
-            <div class="col-md-3"><img src="assets/img/qutation/02.gif" alt="Chironjib Mujib Dialogues"></div>
-            <div class="col-md-3"><img src="assets/img/qutation/03.gif" alt="Chironjib Mujib Dialogues"></div>
-            <div class="col-md-3"><img src="assets/img/qutation/04.gif" alt="Chironjib Mujib Dialogues"></div>
+            <div class="col-md-3"><img src="assets/img/qutation/01.jpg" alt="Chironjib Mujib Dialogues"></div>
+            <div class="col-md-3"><img src="assets/img/qutation/02.jpg" alt="Chironjib Mujib Dialogues"></div>
+            <div class="col-md-3"><img src="assets/img/qutation/03.jpg" alt="Chironjib Mujib Dialogues"></div>
+            <div class="col-md-3"><img src="assets/img/qutation/04.jpg" alt="Chironjib Mujib Dialogues"></div>
 
         </div>
     </div>
@@ -135,14 +135,14 @@
             <span class="m-0">Chironjib Mujib Official Trailer</span>
         </div>
         <div class="row">
-            <div class="col-md-3"><img src="assets/img/gallery/main-port-1.jpg" alt="Chironjib Mujib Dialogues"></div>
-            <div class="col-md-3"><img src="assets/img/gallery/main-port-2.jpg" alt="Chironjib Mujib Dialogues"></div>
-            <div class="col-md-3"><img src="assets/img/gallery/main-port-3.jpg" alt="Chironjib Mujib Dialogues"></div>
-            <div class="col-md-3"><img src="assets/img/gallery/main-port-4.jpg" alt="Chironjib Mujib Dialogues"></div>
-            <div class="col-md-3"><img src="assets/img/gallery/main-port-23.jpg" alt="Chironjib Mujib Dialogues"></div>
-            <div class="col-md-3"><img src="assets/img/gallery/main-port-6.jpg" alt="Chironjib Mujib Dialogues"></div>
-            <div class="col-md-3"><img src="assets/img/gallery/main-port-24.jpg" alt="Chironjib Mujib Dialogues"></div>
-            <div class="col-md-3"><img src="assets/img/gallery/main-port-25.jpg" alt="Chironjib Mujib Dialogues"></div>
+            <div class="col-md-3"><figure><img src="assets/img/gallery/main-port-1.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
+            <div class="col-md-3"><figure><img src="assets/img/gallery/main-port-2.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
+            <div class="col-md-3"><figure><img src="assets/img/gallery/main-port-3.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
+            <div class="col-md-3"><figure><img src="assets/img/gallery/main-port-4.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
+            <div class="col-md-3"><figure><img src="assets/img/gallery/main-port-23.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
+            <div class="col-md-3"><figure><img src="assets/img/gallery/main-port-6.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
+            <div class="col-md-3"><figure><img src="assets/img/gallery/main-port-24.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
+            <div class="col-md-3"><figure><img src="assets/img/gallery/main-port-25.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
         </div>
     </div>
 </section>
@@ -207,12 +207,12 @@
             <span class="m-0">Chironjib Mujib Official Trailer</span>
         </div>
         <div class="row">
-            <div class="col-md-4"><img src="assets/img/behindthescene/Timeline-img-3.jpg" alt=""></div>
-            <div class="col-md-4"><img src="assets/img/behindthescene/Timeline-img-4.jpg" alt=""></div>
-            <div class="col-md-4"><img src="assets/img/behindthescene/Timeline-img-5.jpg" alt=""></div>
-            <div class="col-md-4"><img src="assets/img/behindthescene/Timeline-img-6.jpg" alt=""></div>
-            <div class="col-md-4"><img src="assets/img/behindthescene/Timeline-img-7.jpg" alt=""></div>
-            <div class="col-md-4"><img src="assets/img/behindthescene/Timeline-img-9.jpg" alt=""></div>
+            <div class="col-md-4"><figure><img src="assets/img/behindthescene/Timeline-img-3.jpg" alt=""></figure></div>
+            <div class="col-md-4"><figure><img src="assets/img/behindthescene/Timeline-img-4.jpg" alt=""></figure></div>
+            <div class="col-md-4"><figure><img src="assets/img/behindthescene/Timeline-img-5.jpg" alt=""></figure></div>
+            <div class="col-md-4"><figure><img src="assets/img/behindthescene/Timeline-img-6.jpg" alt=""></figure></div>
+            <div class="col-md-4"><figure><img src="assets/img/behindthescene/Timeline-img-7.jpg" alt=""></figure></div>
+            <div class="col-md-4"><figure><img src="assets/img/behindthescene/Timeline-img-9.jpg" alt=""></figure></div>
         </div>
     </div>
 </section>
@@ -267,7 +267,7 @@
 </section>
 
 <!-- ================= BLOGS AND NEWS =================== -->
-<section class="Team py-5">
+<section class="Team blog py-5">
     <div class="container" >
         <div class="section_Heading">
             <h1 class="m-0">Movie <span class="color-default">Blogs & News</span></h1>
