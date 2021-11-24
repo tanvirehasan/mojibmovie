@@ -8,7 +8,6 @@
 @font-face { font-family: bangla-regular; src: url('font/kalpurush/kalpurush.ttf'); }
 @font-face { font-family: bangla-azad; src: url('font/AzadFeni/AzadFeni.ttf'); }
 
-
 h1, h2, h3, h4, h5, h6{
   margin: 0px;
   padding: 0px;
@@ -22,9 +21,30 @@ h1, h2, h3, h4, h5, h6{
   --black: #050505be;
 }
 
-.color-default{
-  color: var(--default);
+.color-default{color: var(--default);}
+.bg-black{background-color:#242424;}
+
+
+/* === scrollbar === */
+::-webkit-scrollbar {
+  width: 8px;
 }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:var(--default) ; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
 
 .section_Heading{
   text-align: center;
@@ -38,7 +58,7 @@ h1, h2, h3, h4, h5, h6{
 
 .logo{width:50%;}
 
-.nav-item a{
+nav .nav-item a{
     font-family: roboto-Bold;
     text-transform: uppercase;
     color: var(--default);
@@ -47,7 +67,7 @@ h1, h2, h3, h4, h5, h6{
     padding-left: 40px;    
 }
 
-.nav-item a:hover{
+nav .nav-item a:hover{
     color: var(--black);
 }
 
@@ -193,6 +213,22 @@ h1, h2, h3, h4, h5, h6{
 }
 
 
+/* =========== trailer ============ */
+
+.trailer h3{
+	font-family:bangla-azad;
+}
+
+.trailer p{
+	font-family:bangla-regular;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+
+
+
+
 /* =============Gallery=========== */
 
 .Gallery img{
@@ -216,8 +252,45 @@ h1, h2, h3, h4, h5, h6{
   font-family:bangla-regular;
   font-size: 20px;
   color: var(--black);
-  
+}
+
+/* ======== FOOTER ======== */
+
+.footer-text{
+	font-family:bangla-azad;
+	color: rgb(160, 160, 160);
+	font-size: 20px;
+}
+
+footer ul li a{
+	padding: 0px;
+	margin: 0px;
+	color: rgb(160, 160, 160);
+	text-decoration: none;
+	display:block;
 }
 
 
+footer ul li a:hover{
 
+	color: #fff;
+}
+
+
+.sub_footer{
+	background-color: #00000031;
+	margin-top:50px;
+}
+
+.sub_footer p{
+	padding: 0;
+	margin: 0;
+	color:rgb(104, 103, 103);
+}
+
+.sub_footer a{
+	padding: 0;
+	margin: 0;
+	color:rgb(104, 103, 103);
+	text-decoration: none;
+}
