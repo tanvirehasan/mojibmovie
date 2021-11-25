@@ -14,6 +14,9 @@ h1, h2, h3, h4, h5, h6{
 
 }
 
+.btn-close{
+	color: #fff !important;
+}
 
 /* color  */
 :root {
@@ -200,23 +203,46 @@ nav .nav-item a:hover{
 
 }
 
-@media only screen and (min-width:320px) and (max-width:759px) {
-	.carbon-text {
-		font-size: 14px
-	}
+/* =========== Dialogues ============ */
+.Dialogues img{
+	width: 100% !important;
+	height: auto;
 }
-
-@media only screen and (max-width:1023px) {
-	.jquery-script-ads {
-		display: none
-	}
-}
-
 
 /* =========== trailer ============ */
+.trailer img{
+	width: 100% !important;
+	height: auto;
+}
+
+.trailer-video{
+	position: relative;
+}
+
+.trailer-video .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-size: 40px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: rgba(255, 0, 0, 0.534);
+  opacity: .7;
+}
+
+.trailer-video .btn:hover{
+	opacity: 1;
+	color: rgba(255, 255, 255, 0.808);
+}
+
 
 .trailer h3{
 	font-family:bangla-azad;
+	/* margin-top: 100px; */
 }
 
 .trailer p{
@@ -226,11 +252,7 @@ nav .nav-item a:hover{
 }
 
 
-
-
-
 /* =============Gallery=========== */
-
 .Gallery img {
 	width: 100%;
 	-webkit-transform: scale(1);
@@ -258,7 +280,6 @@ figure {
 }
 
 
-
 /* ============= Team =========== */
 .Team img{
   width: 100%;
@@ -280,8 +301,15 @@ figure {
 	opacity: 0.5;
 }
 
-/* ======== FOOTER ======== */
+.blog .card{
 
+	margin-bottom: 25px;
+}
+
+
+
+
+/* ======== FOOTER ======== */
 .footer-text{
 	font-family:bangla-azad;
 	color: rgb(160, 160, 160);
@@ -319,4 +347,47 @@ footer ul li a:hover{
 	margin: 0;
 	color:rgb(104, 103, 103);
 	text-decoration: none;
+}
+
+
+/* ================== PAGE ================= */
+/* ======================= PAGE HADER ==================== */
+.pageheader{
+  background-image: url(../img/banner/pageheader.jpg);
+  height:250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============== media CSS ============== */
+@media only screen and (min-width:320px) and (max-width:759px) {
+
+	.carbon-text {
+		font-size: 14px
+	}
+
+	.Dialogues img{
+		margin-bottom: 20px;
+	}
+}
+
+@media only screen and (max-width:1023px) {
+	.jquery-script-ads {
+		display: none
+	}
 }

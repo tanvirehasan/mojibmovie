@@ -4,9 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+     <!-- owlcarousel -->   
+    <link rel="stylesheet" href="assets/carousel/owl.carousel.min.css">
+    <!-- Main CSS -->   
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.2/css/pro.min.css">
     <link rel="stylesheet" href="assets/js/jquery.flipster.min.css">
+
     <title></title>
   </head>
 <body>
@@ -20,9 +24,9 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
             <ul class="nav justify-content-end">
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">MOVIE</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">CINEMAS</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">SHOWTIME</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Blogs & News</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
             </ul>
             </div>
@@ -51,7 +55,6 @@
                         <li data-flip-title="Cyan" data-flip-category="Blues">
                             <img src="assets/img/slider/text7.gif">
                         </li>
-
                         <li data-flip-title="Razzmatazz" data-flip-category="Purples">
                             <img src="assets/img/slider/text2.gif">
                         </li>
@@ -69,20 +72,22 @@
     </div>
 </header>
 
-
 <!-- ================= TRAILER =================== -->
 <section class="trailer py-5">
     <div class="container">
         <div class="section_Heading">
-            <h1>Movie <span class="color-default">Trailer</span></h1>
+            <h1>Movie <span class="color-default">Trailer & Teaser</span></h1>
             <span>Chironjib Mujib Official Trailer</span>
         </div>
 
         <div class="row">
-            <div class="col-md-7">
-                <iframe width="100%" height="450" src="https://www.youtube.com/embed/A-qJspWT_mM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="col-md-6">
+                <div class="trailer-video">                
+                    <img src="assets/img/banner/05.jpg" alt="">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><i class="fas fa-play text-white"></i></button>
+                </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-6">
                 <h3>সিনোপসিস</h3>
                 <p>
                     জাতির পিতা বঙ্গবন্ধু শেখ মুজিবুর রহমান এর “অসমাপ্ত আত্মজীবনী” অবলম্বনে ১৯৪৯ থেকে ১৯৫২ পর্যন্ত গণ মানুষের নেতা শেখ মুজিব হয়ে ওঠার প্রেক্ষাপট এবং মহান ভাষা আন্দোলনে তার ভূমিকা নিয়ে নির্মিত চলচ্চিত্র “চিরঞ্জীব মুজিব” শেখ হাসিনা ও শেখ রেহানা নিবেদিত শেখ মুজিবুর রহমানের অসমাপ্ত আত্মজীবনী অবলম্বনে পূর্ণদৈর্ঘ্য চলচ্চিত্র
@@ -92,19 +97,26 @@
         <hr class="border border-top border-danger">
 
         <!-- ================= TRAISER =================== -->
-        <div class="row mt-3">
-            <div class="col-md-3">
-                <iframe width="100%" height="250" src="https://www.youtube.com/embed/A-qJspWT_mM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="col-md-3">
-                <iframe width="100%" height="250" src="https://www.youtube.com/embed/A-qJspWT_mM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="col-md-3">
-                <iframe width="100%" height="250" src="https://www.youtube.com/embed/A-qJspWT_mM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="col-md-3">
-                <iframe width="100%" height="250" src="https://www.youtube.com/embed/A-qJspWT_mM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+        <div class="owl-carousel"> 
+
+            <!-- video 1 -->
+            <div class="trailer-video">                
+                <img src="assets/img/banner/06.jpg" alt="">
+                <button class="btn"><i class="fas fa-play"></i></button>
+            </div>         
+        
+            <!-- video 2 -->            
+            <div class="trailer-video">                
+                <img src="assets/img/banner/09.jpg" alt="">
+                <button class="btn"><i class="fas fa-play"></i></button>
+            </div>         
+            
+            <!-- video 3 -->            
+            <div class="trailer-video">                
+                <img src="assets/img/banner/08.jpg" alt="">
+                <button class="btn"><i class="fas fa-play"></i></button>
+            </div> 
+
         </div>
     </div>
 </section>
@@ -115,14 +127,13 @@
     <div class="container" >
         <div class="section_Heading">
             <h1 class="m-0">Movie Best <span class="color-default">Dialogues</span></h1>
-            <span class="m-0">Chironjib Mujib Official Trailer</span>
+            <span class="m-0">Best Dialogues of Chironjib Mujib Movie</span>
         </div>
         <div class="row">
-            <div class="col-md-3"><img src="assets/img/qutation/01.jpg" alt="Chironjib Mujib Dialogues"></div>
-            <div class="col-md-3"><img src="assets/img/qutation/02.jpg" alt="Chironjib Mujib Dialogues"></div>
-            <div class="col-md-3"><img src="assets/img/qutation/03.jpg" alt="Chironjib Mujib Dialogues"></div>
-            <div class="col-md-3"><img src="assets/img/qutation/04.jpg" alt="Chironjib Mujib Dialogues"></div>
-
+            <div class="col-md-3"><img src="assets/img/qutation/01.jpg" alt=""></div>
+            <div class="col-md-3"><img src="assets/img/qutation/02.jpg" alt=""></div>
+            <div class="col-md-3"><img src="assets/img/qutation/03.jpg" alt=""></div>
+            <div class="col-md-3"><img src="assets/img/qutation/04.jpg" alt=""></div>
         </div>
     </div>
 </section>
@@ -132,10 +143,10 @@
     <div class="container" >
         <div class="section_Heading">
             <h1 class="m-0">Movie <span class="color-default">Gallery</span></h1>
-            <span class="m-0">Chironjib Mujib Official Trailer</span>
+            <span class="m-0">Some Photos to  Chironjib Mujib Movie</span>
         </div>
         <div class="row">
-            <div class="col-md-3"><figure><img src="assets/img/gallery/main-port-1.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
+            <div class="col-md-3" data-bs-toggle="modal" data-bs-target="#staticimage"><figure><img src="assets/img/gallery/main-port-1.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
             <div class="col-md-3"><figure><img src="assets/img/gallery/main-port-2.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
             <div class="col-md-3"><figure><img src="assets/img/gallery/main-port-3.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
             <div class="col-md-3"><figure><img src="assets/img/gallery/main-port-4.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
@@ -152,8 +163,8 @@
 <section class="Team py-5 bg-light">
     <div class="container" >
         <div class="section_Heading">
-            <h1 class="m-0">Our <span class="color-default">Team</span></h1>
-            <span class="m-0">Chironjib Mujib Official Trailer</span>
+            <h1 class="m-0">Team<span class="color-default"> Leaders</span></h1>
+            <span class="m-0">Team Leaders of Chironjib Mujib Movie</span>
         </div>
         <div class="row">
             <!-- Team 1 -->
@@ -204,7 +215,7 @@
     <div class="container" >
         <div class="section_Heading">
             <h1 class="m-0">Movie Behind <span class="color-default">The Scene</span></h1>
-            <span class="m-0">Chironjib Mujib Official Trailer</span>
+            <span class="m-0">Best Behind The Scene of Chironjib Mujib Movie</span>
         </div>
         <div class="row">
             <div class="col-md-4"><figure><img src="assets/img/behindthescene/Timeline-img-3.jpg" alt=""></figure></div>
@@ -224,7 +235,7 @@
     <div class="container" >
         <div class="section_Heading">
             <h1 class="m-0">Movie <span class="color-default">Actress & Actors</span></h1>
-            <span class="m-0">Chironjib Mujib Official Trailer</span>
+            <span class="m-0">Actress & Actors of Chironjib Mujib Movie</span>
         </div>
         <div class="row">
             <!-- Actress & Actors 1 -->
@@ -270,8 +281,8 @@
 <section class="Team blog py-5">
     <div class="container" >
         <div class="section_Heading">
-            <h1 class="m-0">Movie <span class="color-default">Blogs & News</span></h1>
-            <span class="m-0">Chironjib Mujib Official Trailer</span>
+            <h1 class="m-0">Movie <span class="color-default">Blogs & News</span></h1>  
+            <span class="m-0">Information & News of Chironjib Mujib Movie</span>
         </div>
 
         <div class="row">
@@ -355,17 +366,46 @@
 
 
 
+<!-- Modal for Video -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="http://localhost/mojibmovie/assets/img/logo/logored.png" width="100"  >
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body bg-dark p-0 m-0">
+        <iframe width="100%" height="720"  src="https://www.youtube.com/embed/2jQEvp7h7V8?controls=0&modestbranding=1&rel=0&showinfo=0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
 
-
+<!-- Modal for Image -->
+<div class="modal fade" id="staticimage" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropimage" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+        <div class="modal-header">
+            <img src="http://localhost/mojibmovie/assets/img/logo/logored.png" width="100"  >
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      <div class="modal-body bg-dark p-0">
+          <img src="assets/img/gallery/main-port-1.jpg" alt="" width="100%">
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- =============js================= -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/carousel/owl.carousel.js"></script>
 <script src="assets/bootstrap/js/popper.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/jquery.js"></script>
 <script src="assets/js/jquery.flipster.min.js"></script>
 <script>
     var coverflow = $("#coverflow").flipster();
         var carousel = $("#carousel").flipster({
+            
         style: 'carousel',
         spacing: -0.5,
         nav: true,
@@ -378,6 +418,19 @@
     var flat = $("#flat").flipster({
         style: 'flat',
         spacing: -0.25
+    });
+</script>
+
+
+<script>
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        items:3,
+        loop:true,
+        margin:15,
+        autoplay:true,
+        autoplayTimeout:2500,
+        autoplayHoverPause:true
     });
 </script>
   </body>
