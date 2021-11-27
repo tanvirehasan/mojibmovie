@@ -7,30 +7,11 @@
             <div class="col-md-6 slider-box text-center">
                 <div id="coverflow">
                     <ul class="flip-items">
-                        <li data-flip-title="Red">
-                            <img src="assets/img/slider/text1.gif">
-                        </li>
-                        <li data-flip-title="Cerulean Blue" data-flip-category="Blues">
-                            <img src="assets/img/slider/text5.gif">
-                        </li>
-                        <li data-flip-title="Cyan" data-flip-category="Blues">
-                            <img src="assets/img/slider/text8.gif">
-                        </li>
-                        <li data-flip-title="Dodger Blue" data-flip-category="Blues">
-                            <img src="assets/img/slider/text6.gif">
-                        </li>
-                        <li data-flip-title="Cyan" data-flip-category="Blues">
-                            <img src="assets/img/slider/text7.gif">
-                        </li>
-                        <li data-flip-title="Razzmatazz" data-flip-category="Purples">
-                            <img src="assets/img/slider/text2.gif">
-                        </li>
-                        <li data-flip-title="Deep Lilac" data-flip-category="Purples">
-                            <img src="assets/img/slider/text3.gif">
-                        </li>
-                        <li data-flip-title="Daisy Bush" data-flip-category="Purples">
-                            <img src="assets/img/slider/text4.gif">
-                        </li>
+                        <?php            
+                        $Selet_Data = SelectData('slide','');
+                        while ($row = $Selet_Data->fetch_assoc()) {?>
+                            <li><img src="assets/img/slider/<?= $row['slide_image']; ?>"></li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -50,44 +31,31 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="trailer-video">                
-                    <img src="assets/img/banner/05.jpg" alt="">
-                    <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><i class="fas fa-play text-white"></i></button>
+                    <img src="assets/img/banner/<?php echo Trailer('Trailer_image'); ?>" alt="">
+                        <button class="btn" onclick="Video_link(<?php $videoid=Trailer('Trailer_video'); echo "'inc/popup.php?vid=".$videoid."'"; ?>)" ><i class="fas fa-play text-white"></i></button>
                 </div>
             </div>
             <div class="col-md-6">
-                <h3>সিনোপসিস</h3>
-                <p>
-                    জাতির পিতা বঙ্গবন্ধু শেখ মুজিবুর রহমান এর “অসমাপ্ত আত্মজীবনী” অবলম্বনে ১৯৪৯ থেকে ১৯৫২ পর্যন্ত গণ মানুষের নেতা শেখ মুজিব হয়ে ওঠার প্রেক্ষাপট এবং মহান ভাষা আন্দোলনে তার ভূমিকা নিয়ে নির্মিত চলচ্চিত্র “চিরঞ্জীব মুজিব” শেখ হাসিনা ও শেখ রেহানা নিবেদিত শেখ মুজিবুর রহমানের অসমাপ্ত আত্মজীবনী অবলম্বনে পূর্ণদৈর্ঘ্য চলচ্চিত্র
-                </p>
+                <h3><?= Trailer('Trailer_title'); ?></h3>
+                <p><?=  Trailer('Trailer_text'); ?></p>
             </div>
         </div>
         <hr class="border border-top border-danger">
 
         <!-- ================= TRAISER =================== -->
         <div class="owl-carousel"> 
-
-            <!-- video 1 -->
-            <div class="trailer-video">                
-                <img src="assets/img/banner/06.jpg" alt="">
-                <button class="btn"><i class="fas fa-play"></i></button>
-            </div>         
-        
-            <!-- video 2 -->            
-            <div class="trailer-video">                
-                <img src="assets/img/banner/09.jpg" alt="">
-                <button class="btn"><i class="fas fa-play"></i></button>
-            </div>         
-            
-            <!-- video 3 -->            
-            <div class="trailer-video">                
-                <img src="assets/img/banner/08.jpg" alt="">
-                <button class="btn"><i class="fas fa-play"></i></button>
-            </div> 
-
+            <?php            
+                $Selet_Data = SelectData('teaser','');
+                while ($row = $Selet_Data->fetch_assoc()) {?>           
+                <div class="trailer-video">                
+                    <img src="assets/img/banner/<?php echo $row['Teaser_image'];?>" alt="">
+                    <button class="btn" onclick="Video_link(<?php $videoid=$row['Teaser_video']; echo "'inc/popup.php?vid=".$videoid."'"; ?>)"   ><i class="fas fa-play"></i></button>
+                </div>  
+            <?php } ?>   
         </div>
+
     </div>
 </section>
-
 
 <!-- ================= DIALOGUES =================== -->
 <section class="Dialogues bg-light py-5">
@@ -97,10 +65,11 @@
             <span class="m-0">Best Dialogues of Chironjib Mujib Movie</span>
         </div>
         <div class="row">
-            <div class="col-md-3"><img src="assets/img/qutation/01.jpg" alt=""></div>
-            <div class="col-md-3"><img src="assets/img/qutation/02.jpg" alt=""></div>
-            <div class="col-md-3"><img src="assets/img/qutation/03.jpg" alt=""></div>
-            <div class="col-md-3"><img src="assets/img/qutation/04.jpg" alt=""></div>
+            <?php            
+            $Selet_Data = SelectData('movie_dialogue','');
+            while ($row = $Selet_Data->fetch_assoc()) {?>
+                <div class="col-md-3"><img src="assets/img/qutation/<?= $row['md_image']; ?>" alt=""></div>
+            <?php } ?>
         </div>
     </div>
 </section>
@@ -113,14 +82,11 @@
             <span class="m-0">Some Photos to  Chironjib Mujib Movie</span>
         </div>
         <div class="row">
-            <div class="col-md-3" data-bs-toggle="modal" data-bs-target="#staticimage"><figure><img src="assets/img/gallery/main-port-1.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
-            <div class="col-md-3"><figure><img src="assets/img/gallery/main-port-2.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
-            <div class="col-md-3"><figure><img src="assets/img/gallery/main-port-3.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
-            <div class="col-md-3"><figure><img src="assets/img/gallery/main-port-4.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
-            <div class="col-md-3"><figure><img src="assets/img/gallery/main-port-23.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
-            <div class="col-md-3"><figure><img src="assets/img/gallery/main-port-6.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
-            <div class="col-md-3"><figure><img src="assets/img/gallery/main-port-24.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
-            <div class="col-md-3"><figure><img src="assets/img/gallery/main-port-25.jpg" alt="Chironjib Mujib Dialogues"></figure></div>
+             <?php            
+            $Selet_Data = SelectData('gallery','');
+            while ($row = $Selet_Data->fetch_assoc()) {?>
+            <div class="col-md-3" onclick="Video_link(<?php $imgid=$row['g_image']; echo "'inc/popup.php?imgid=".$imgid."'"; ?>)"><figure><img src="assets/img/gallery/<?= $row['g_image']; ?>" alt="Chironjib Mujib Dialogues"></figure></div>
+             <?php } ?>
         </div>
     </div>
 </section>
@@ -135,43 +101,22 @@
         </div>
         <div class="row">
             <!-- Team 1 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body p-0 m-0">
-                        <img src="assets/img/team/Director-01.jpg" alt="Chironjib Mujib Dialogues">
-                    </div>
-                    <div class="card-footer text-center p-4">
-                        <h4 class="py-1 color-default">নজরুল ইসলাম</h4>
-                        <p>পান্ডুলিপি, সংলাপ ও পরিচালক</p>
-                    </div>
-                </div>     
-            </div>
 
-            <!-- Team 2 -->
+           <?php            
+            $Selet_Data = SelectData('team_leader','');
+            while ($row = $Selet_Data->fetch_assoc()) {?>
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body p-0 m-0">
-                        <img src="assets/img/team/Director-02.jpg" alt="Chironjib Mujib Dialogues">
+                        <img src="assets/img/team/<?= $row['leader_image'] ?>" alt="Chironjib Mujib Dialogues">
                     </div>
                     <div class="card-footer text-center p-4">
-                        <h4 class="py-1 color-default">জুয়েল মাহমুদ</h4>
-                        <p>চিত্রনাট্য ও সৃজনশীল পরিচালক</p>
+                        <h4 class="py-1 color-default"><?= $row['leader_name'] ?></h4>
+                        <p><?=$row['leader_desgnation'] ?></p>
                     </div>
                 </div>     
             </div>
-
-            <!-- Team 3 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body p-0 m-0">
-                        <img src="assets/img/team/Producer.jpg" alt="Chironjib Mujib Dialogues">
-                    </div>
-                    <div class="card-footer text-center p-4">
-                        <h4 class="py-1 color-default">লিটন হায়দার</h4>
-                        <p>প্রযোজক</p>
-                    </div>
-                </div>     
-            </div>
+            <?php } ?>
         </div>
     </div>
 </section>
@@ -185,12 +130,11 @@
             <span class="m-0">Best Behind The Scene of Chironjib Mujib Movie</span>
         </div>
         <div class="row">
-            <div class="col-md-4"><figure><img src="assets/img/behindthescene/Timeline-img-3.jpg" alt=""></figure></div>
-            <div class="col-md-4"><figure><img src="assets/img/behindthescene/Timeline-img-4.jpg" alt=""></figure></div>
-            <div class="col-md-4"><figure><img src="assets/img/behindthescene/Timeline-img-5.jpg" alt=""></figure></div>
-            <div class="col-md-4"><figure><img src="assets/img/behindthescene/Timeline-img-6.jpg" alt=""></figure></div>
-            <div class="col-md-4"><figure><img src="assets/img/behindthescene/Timeline-img-7.jpg" alt=""></figure></div>
-            <div class="col-md-4"><figure><img src="assets/img/behindthescene/Timeline-img-9.jpg" alt=""></figure></div>
+           <?php            
+            $Selet_Data = SelectData('movie_scene','');
+            while ($row = $Selet_Data->fetch_assoc()) {?>
+            <div class="col-md-4"><figure><img src="assets/img/behindthescene/<?= $row['m_image'];?>" alt=""></figure></div>
+          <?php } ?>
         </div>
     </div>
 </section>
@@ -205,41 +149,22 @@
             <span class="m-0">Actress & Actors of Chironjib Mujib Movie</span>
         </div>
         <div class="row">
-            <!-- Actress & Actors 1 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body p-0 m-0">
-                        <img src="assets/img/team/Blog-standard-img-1.jpg" alt="Chironjib Mujib Dialogues">
-                    </div>
-                    <div class="card-footer text-center p-4" style="background-color:var(--default);">
-                        <h4 class="py-1 text-white">আহমেদ রুবেল</h4>
-                    </div>
-                </div>     
-            </div>
 
-            <!-- Actress & Actors 2 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body p-0 m-0">
-                        <img src="assets/img/team/Blog-standard-img-15.jpg" alt="Chironjib Mujib Dialogues">
-                    </div>
-                    <div class="card-footer text-center p-4" style="background-color:var(--default);">
-                        <h4 class="py-1 text-white">পূর্ণিমা</h4>
-                    </div>
-                </div>     
-            </div>
+        <?php            
+            $Selet_Data = SelectData('characters','');
+            while ($row = $Selet_Data->fetch_assoc()) {?>
 
-            <!-- Actress & Actors 3 -->
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body p-0 m-0">
-                        <img src="assets/img/team/Blog-standard-img-16.jpg" alt="Chironjib Mujib Dialogues">
+                        <img src="assets/img/team/<?= $row['c_image']; ?>" alt="Chironjib Mujib Dialogues">
                     </div>
                     <div class="card-footer text-center p-4" style="background-color:var(--default);">
-                        <h4 class="py-1 text-white">আজাদ আবুল কালাম</h4>
+                        <h4 class="py-1 text-white"><?= $row['c_name']; ?></h4>
                     </div>
                 </div>     
             </div>
+                <?php } ?>
         </div>
     </div>
 </section>

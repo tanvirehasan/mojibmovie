@@ -40,34 +40,28 @@
     </div>
 </footer>
 
+<!--============== POP UP ============-->
 
+
+<!-- video -->
+<script> 
+    function Video_link(url) {
+        $.ajax({
+            url: url,
+            method: "POST",
+            success: function(data) {
+                $("#video").html(data);
+                $("#dataModal").modal("show");
+            },
+        });
+    }
+</script>
 
 <!-- Modal for Video -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <img src="http://localhost/mojibmovie/assets/img/logo/logored.png" width="100"  >
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body bg-dark p-0 m-0">
-        <iframe style="width:100%;"  height="720"  src="https://www.youtube.com/embed/2jQEvp7h7V8?controls=0&modestbranding=1&rel=0&showinfo=0" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-</div>
+<div class="modal fade" id="dataModal">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" id="video">
 
-<!-- Modal for Image -->
-<div class="modal fade" id="staticimage" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropimage" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered">
-    <div class="modal-content">
-        <div class="modal-header">
-            <img src="http://localhost/mojibmovie/assets/img/logo/logored.png" width="100%"  >
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-      <div class="modal-body bg-dark p-0">
-          <img src="assets/img/gallery/main-port-1.jpg" alt="" width="100%">
-      </div>
     </div>
   </div>
 </div>

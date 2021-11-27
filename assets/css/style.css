@@ -323,11 +323,6 @@ figure {
   color: var(--black);
 }
 
-.blog .card:hover{
-	cursor: pointer;
-	border: 1px solid var(--default);
-	opacity: 0.5;
-}
 
 .blog .card{
 

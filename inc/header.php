@@ -1,3 +1,4 @@
+<?php include "config/funcstion.php";?>
 <!doctype html>
 <html lang="en">
   <head>
