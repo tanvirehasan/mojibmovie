@@ -1,11 +1,52 @@
     <?php include 'inc/header.php';?>
 
+    <?php 
+    if(isset($_POST['submit'])){
+
+        $Cat_ID        ="CAT-". rand(9999, 99999);
+        $Hall_ID       =$_POST['Hall_ID'];
+        $Cat_SitType   =$_POST['Cat_SitType'];
+        $Cat_Price     =$_POST['Cat_Price'];
+        $Cat_capacity  =$_POST['Cat_capacity'];
+
+
+        $Insert = "INSERT INTO `admin_ticketcategory`(
+
+                `Cat_ID`,
+                `Hall_ID`,
+                `Cat_SitType`,
+                `Cat_Price`,
+                `Cat_capacity`
+
+                )VALUES(
+
+                '$Cat_ID',
+                '$Hall_ID',
+                '$Cat_SitType',
+                '$Cat_Price',
+                '$Cat_capacity'              
+
+            )";
+
+        if ($conn->query($Insert) ===TRUE) {
+          $mess = alert('success', 'SUCCESS');            
+        }else{
+            $mess = alert('danger', 'SORRY');
+
+        }
+
+    }
+?>
+
+
+
+
+
+
    <div class="layout-content">
 
-         <!-- [ content ] Start -->
         <div class="container-fluid flex-grow-1 container-p-y"> 
-
-
+         <?php  if (isset($mess)) { echo $mess; } ?>
          <div class="row">
                         
              <div class="col-md-12">
@@ -26,25 +67,29 @@
                                 <thead>
                                     <tr>
                                         <th>SL</th>
+                                        <th>Hall Name</th>
                                         <th>Sit Type</th>
-                                        <th>Ticket Price</th>
-                                        <th>Capacity</th>
-                                        <th>Hall ID</th>
-                                        <th>Action</th>
+                                        <th>Price</th>
+                                        <th>Sit Capacity</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>VIP</td>
-                                        <td>200 &#2547; </td>
-                                        <td>300</td>
-                                        <td>9876543</td>
-                                        <td>
-                                            <a href="#!" class="btn btn-info btn-sm">Edit</a>
-                                            <a href="#!" class="btn btn-danger btn-sm">Delete</a>
-                                        </td>
-                                    </tr>   
+                                    <?php 
+                                            $i=1;
+                                        $data = SelectData('admin_ticketcategory','INNER JOIN admin_cinema_hall ON admin_ticketcategory.Hall_ID=admin_cinema_hall.Hall_ID ');
+                                        while ($row = $data->fetch_assoc()) {?>   
+                                            <tr>
+                                                <td><?= $i++ ;?></td>
+                                                <td><?= $row['Hall_Name']; ?></td>
+                                                <td><?= $row['Cat_SitType']; ?></td>
+                                                <td><?= $row['Cat_Price']; ?></td>
+                                                <td><?= $row['Cat_capacity']; ?></td>
+                                                <td>
+                                                    <a href="#!" class="btn btn-info btn-sm">Edit</a>
+                                                    <a href="#!" class="btn btn-danger btn-sm">Delete</a>
+                                                </td>
+                                            </tr> 
+                                        <?php } ?> 
                                 </tbody>
                             </table>
                         </div>
@@ -80,27 +125,25 @@
                 <div class="container my-5">
 
                  
-                  <label for="sittype" class=" form-label" style="font-weight:700;">Select Sit Type</label>
-                  <select name="sittype" class="countries form-control mb-4" id="sittype">
-                        <option value="">VIP</option>
-                        <option value="">Regular</option>
-                        <option value="">VIP</option>
-                  </select>
 
-                  <label for="hallid" class=" form-label" style="font-weight:700;">Select Hall ID</label>
-                  <select name="hall_id" class="countries form-control mb-4" id="hallid">
-                        <option value="">20034</option>
-                        <option value="">44857</option>
-                        <option value="">6768778</option>
-                  </select>
+                <label for="hallname" class=" form-label" style="font-weight:700;">Hall Name</label>
+                <input type="text" class="form-control mb-4 " list="halllist" name="Hall_ID" >
+                <datalist id="halllist">
+                      <?php 
+                        $data = SelectData('admin_cinema_hall','');
+                        while ($row = $data->fetch_assoc()) {?> 
+                            <option value="<?= $row['Hall_ID']; ?>"><?= $row['Hall_Name']; ?></option>
+                    <?php } ?>
+                </datalist>          
 
-                   <label for="price" class=" form-label" style="font-weight:700;">Price</label>
-                  <input type="text" class="form-control mb-4 " id="price" name="ticket_price" >
+                <label for="sit" class=" form-label" style="font-weight:700;">Sit Type</label>
+                <input type="text" class="form-control mb-4 " id="sit" name="Cat_SitType" >
 
-                   <label for="capacity" class=" form-label" style="font-weight:700;">Capacity</label>
-                  <input type="text" class="form-control mb-4 " id="capacity" name="capacity" >
+                <label for="Price" class=" form-label" style="font-weight:700;">Price</label>
+                <input type="text" class="form-control mb-4 " id="Price" name="Cat_Price" >
 
-
+                <label for="Capacity" class=" form-label" style="font-weight:700;">Capacity</label>
+                <input type="number" class="form-control mb-4 " id="Capacity" name="Cat_capacity" >
 
                  
                   <div class="float-right m-0">

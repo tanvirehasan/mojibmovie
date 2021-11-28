@@ -1,10 +1,29 @@
     <?php include 'inc/header.php';?>
 
+
+     <?php 
+    if(isset($_POST['submit'])){
+
+        $Hall_ID       =$_POST['Hall_ID'];
+        $Time          =$_POST['Show_Time'];
+
+
+        $Insert = "INSERT INTO `admin_show_time`( `Hall_ID`, `Show_Time`)VALUES('$Hall_ID', '$Time' )";
+
+        if ($conn->query($Insert) ===TRUE) {
+          $mess = alert('success', 'SUCCESS');            
+        }else{
+            $mess = alert('danger', 'SORRY');
+
+        }
+
+    }
+?>
+
+
    <div class="layout-content">
-
-         <!-- [ content ] Start -->
         <div class="container-fluid flex-grow-1 container-p-y"> 
-
+             <?php  if (isset($mess)) { echo $mess; } ?>
 
          <div class="row">
                         
@@ -26,23 +45,33 @@
                                 <thead>
                                     <tr>
                                         <th>SL</th>
-                                        <th>Tcket ID</th>
-                                        <th>Hall ID</th>
+                                        <th>Hall Name</th>
                                         <th>Time</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>374756</td>
-                                        <td>435465</td>
-                                        <td>12:20 AM</td>
-                                        <td>
-                                            <a href="#!" class="btn btn-info btn-sm">Edit</a>
-                                            <a href="#!" class="btn btn-danger btn-sm">Delete</a>
-                                        </td>
-                                    </tr>   
+                                    <?php 
+                                            $i=1;
+                                        $data = SelectData('admin_show_time','INNER JOIN admin_cinema_hall ON admin_show_time.Hall_ID=admin_cinema_hall.Hall_ID ');
+                                        while ($row = $data->fetch_assoc()) {?>   
+                                            <tr>
+                                                <td><?= $i++ ;?></td>
+                                                <td><?= $row['Hall_Name']; ?></td>
+                                                <td><?php 
+
+                                                $d=strtotime($row['Show_Time']); echo date("h:i:s A", $d);
+                                            
+                                            ?>
+                                            
+                                            
+                                            </td>
+                                                <td>
+                                                    <a href="#!" class="btn btn-info btn-sm">Edit</a>
+                                                    <a href="#!" class="btn btn-danger btn-sm">Delete</a>
+                                                </td>
+                                            </tr> 
+                                        <?php } ?> 
                                 </tbody>
                             </table>
                         </div>
@@ -78,19 +107,18 @@
                 <div class="container my-5">
 
 
-                  <label for="ticketid" class=" form-label" style="font-weight:700;">Select State</label>
-                  <select name="ticketid" class="states form-control mb-4" id="ticketid">
-                         <option value="">Select Ticket ID</option>
-                  </select>
-
-                   <label for="hallid" class=" form-label" style="font-weight:700;">Select Hall ID</label>
-                  <select name="hallid" class="countries form-control mb-4" id="hallid">
-                    
-                        <option value="">Select Hall ID</option>
-                  </select>
+                   <label for="hallid" class=" form-label" style="font-weight:700;">Select Hall Name</label>
+                  <input type="text" class="form-control mb-4 " list="halllist" name="Hall_ID" >
+                    <datalist id="halllist">
+                        <?php 
+                        $data = SelectData('admin_cinema_hall','');
+                        while ($row = $data->fetch_assoc()) {?> 
+                            <option value="<?= $row['Hall_ID']; ?>"><?= $row['Hall_Name']; ?></option>
+                    <?php } ?>
+                    </datalist>     
 
                  <label for="appt"class=" form-label" style="font-weight:700;">Select a time:</label>
-                 <input type="time" class="form-control mb-4 " id="appt" name="showtime">
+                 <input type="time" class="form-control mb-4 " id="appt" name="Show_Time">
 
                  
                   <div class="float-right m-0">

@@ -71,6 +71,9 @@
 <script src="assets/bootstrap/js/popper.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.flipster.min.js"></script>
+<script src="admin/assets/js/countrystatecity.js"></script>
+
+
 <script>
     var coverflow = $("#coverflow").flipster();
         var carousel = $("#carousel").flipster({
