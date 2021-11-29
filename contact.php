@@ -1,16 +1,16 @@
 <?php include "inc/header.php";?>
 
 <!-- ================= pageheader =================== -->
-    <div class="pageheader">
-        <div class="container">
+<div class="pageheader">
+    <div class="container">
         <div class="row mx-0 justify-content-end">
             <div class="col-md-6 slider-box text-end">
-              <h2 class="text-white">CONTACT US</h2>
-               
+            <h2 class="text-white">CONTACT US</h2>
+            
             </div>
         </div>
     </div>
-    </div>
+</div>
 
 <section class="contact py-5">
     <div class="container" >

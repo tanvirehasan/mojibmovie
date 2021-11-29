@@ -24,12 +24,12 @@
             <a class="navbar-brand" href="index.php"><img class="logo" src="assets/img/logo/logored.png" alt="logo"></a>
             <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
             <ul class="nav justify-content-end">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="blog.php">Blogs & News</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.php">Contact us</a></li>
-                <li class="nav-item ps-3"><a class="nav-link btn btn-danger text-center px-3 rounded text-white" href="contact.php"><i class="fas fa-tag me-2"></i>Buy Ticket</a></li>                
+                <li class="nav-item ps-3"><a class="nav-link btn btn-danger text-center px-3 rounded text-white" href="ticket.php"><i class="fas fa-tag me-2"></i>Buy Ticket</a></li>                
             </ul>
             </div>
         </div>
@@ -62,7 +62,7 @@
       <li class="nav-item py-1"><a href="contact" class="nav-link text-white p-0"><i class="fas fa-user-headset pe-2"></i> Contact us</a></li>  
     </ul>
     </nav>
-    <a class="nav-link position-fixed bottom-0 mb-3 px-4 bg-white text-center rounded text-danger w-50 fw-bold" href="contact.php">BUY TICKET</a>
+    <a class="nav-link position-fixed bottom-0 mb-3 px-4 bg-white text-center rounded text-danger w-50 fw-bold" href="ticket.php">BUY TICKET</a>
 	</div>
 </header>
 

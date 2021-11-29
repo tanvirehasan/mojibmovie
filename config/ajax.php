@@ -32,7 +32,7 @@ if (isset($_REQUEST["get_time"])) {
 		while ($data = $dataselect->fetch_assoc()) {
 			$d=strtotime($data['Show_Time']); 
 			$Show_Time=date("h:i:s A", $d);
-				echo "<option value=".$Show_Time.">".$Show_Time."</option>";
+				echo "<option value=".$data['Show_Time'].">".$Show_Time."</option>";
 			 } }else{
 			echo "SORRY!";
 		}

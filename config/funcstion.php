@@ -10,22 +10,34 @@ function SelectData($TableName, $moresql){
     return $select;
 }
 
+//Hall Name
+function Hall_Name($data,$hallid){
+    $row = mysqli_fetch_array(SelectData('admin_cinema_hall',"WHERE Hall_ID='$hallid'"));
+    return $row[$data];
+}
 
-//reconect==========================================================
+//Hall Name
+function Sit_Catagory($data,$catid){
+    $row = mysqli_fetch_array(SelectData('admin_ticketcategory',"WHERE Cat_ID='$catid'"));
+    return $row[$data];
+}
 
+
+
+//UserData
 function UserData($U_data){
     $row = mysqli_fetch_array(SelectData('users',"WHERE Ueser_Email='{$_SESSION['User']}'"));
     echo $row[$U_data];
 }
 
-
+//Trailer
 function Trailer($data){
     $row = mysqli_fetch_array(SelectData('trailer',"WHERE id ='1'"));
     return $row[$data];
 }
 
 
-
+//reconect
 function Reconect($url){
 	echo "<script> location.replace('".$url."')</script>";
 }

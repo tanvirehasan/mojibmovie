@@ -39,14 +39,3 @@
     }
 
 
-   //Select Sit_Type
-//    function Sit_Type(val){
-//         $.ajax({
-//             type: 'post',
-//             url: 'config/ajax.php',
-//             data: {get_sit:val},
-//             success: function (response) {
-//             document.getElementById("SitType").innerHTML=response; 
-//             }
-//         });
-//     }

@@ -384,6 +384,23 @@ footer ul li a:hover{
 }
 
 
+.ticket{
+
+	background: url(../img/banner/alfa-home-c-img-5-1.jpg);
+	background-repeat: no-repeat;	
+}
+
+.ticket .col-md-6{
+
+		background:rgba(255, 254, 254,.7);
+
+}
+
+.amount-payble{
+
+	background-color: #e34151;
+}
+
 
 
 /* =============== media CSS ============== */
@@ -407,6 +424,14 @@ footer ul li a:hover{
 
 	.slider{
 		background: none;
+	}
+
+	.pageheader{
+		display: none;
+	}
+
+	.ticket, .contact, .blog, .Gallery{
+		margin-top: 50px;
 	}
 }
 

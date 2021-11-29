@@ -1,5 +1,8 @@
 <?php include "inc/header.php";?>
 
+
+
+
 <!-- ================= pageheader =================== -->
     <div class="pageheader">
         <div class="container">
@@ -12,18 +15,14 @@
     </div>
     </div>
 
-    <section class="contact trailer py-5">
+    <section class="ticket py-5">
     <div class="container" >
-        <div class="section_Heading">
-            <h1 class="m-0">Take Your<span class="color-default"> Ticket</span></h1>
-            <!-- <span class="m-0"></span> -->
-        </div>
         <form action="ticketest.php" method="POST">
-        <div class="row d-flex justify-content-center p-3">
-            
-             <div class="col-md-6 p-4  bg-light">
+        <div class="row d-flex justify-content-center p-3">            
+             <div class="col-md-6 p-4 py-5 rounded">
+                 <h1 class="m-0 text-center pb-4">Take Your<span class="color-default"> Ticket</span></h1>
                  <div class="form-gorup mb-3">
-                     <input type="date" class="form-control" name="" id="">
+                     <input type="date" class="form-control" name="Ticket_date">
                  </div>
                 <div class="row mb-3">
                     <div class="col">
@@ -61,11 +60,17 @@
                         </select>
                     </div>
                     <div class="col">
-                        <input type="number" name='Ticket_Qty' class="form-control" placeholder="Quanity">
+                        <select name='Ticket_Qty' class="form-control">
+                            <option value="">Select Quantity</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
                     </div>
                 </div>
 
-                <button type="submit" class="form-control btn-danger text-white">Submit</button>
+                <button type="submit" name="submit" class="form-control btn-danger text-white">Submit</button>
 
             </div>
             
