@@ -44,7 +44,7 @@ function Reconect($url){
 
 //Login Required
 function If_Not_Login($url){
-	if (!isset($_SESSION['User'])) {
+	if (!isset($_SESSION['user'])) {
 		Reconect($url);
 	}
 }

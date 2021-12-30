@@ -402,6 +402,40 @@ footer ul li a:hover{
 }
 
 
+/* 
+.booking-summery ::placeholder{
+	color: #fff;
+	text-transform: uppercase;
+}
+.booking-summery select{
+	text-transform: uppercase;
+	 color: #fff;
+}
+.booking-summery select option{
+	background:#FFF;
+}
+.booking-summery .row label{
+	text-transform: uppercase;
+	 color: #fff;
+	
+}
+.booking-summery .form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+ border-bottom: 1px solid rgba(255, 255, 255,0.7);
+
+}
+
+*/
+
+.booking-summery .form-control{
+  border-radius:0px;
+  color: #fff;
+
+} 
+
+
 
 /* =============== media CSS ============== */
 @media only screen and (min-width:320px) and (max-width:759px) {

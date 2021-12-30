@@ -65,16 +65,17 @@
       $trailer_image        =$_FILES["trailer_image"]["name"];
     
       //photos
-      $target_dir           = "trailer/";
+      $target_dir           = "../assets/img/banner/";
       $target_file          = $target_dir . basename($_FILES["trailer_image"]["name"]);
       move_uploaded_file($_FILES["trailer_image"]["tmp_name"], $target_file);
 
 
       $sql="INSERT INTO trailer (
-                    trailer_title,
-                    trailer_url,
-                    trailer_descripton,
-                    trailer_image
+          
+                    Trailer_title,
+                    Trailer_video,
+                    Trailer_text,
+                    Trailer_image
                    
                   )
                     VALUES(
